@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,28 +9,38 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:paddingTop="5dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="5dp">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_fun"
+            android:layout_width="8dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="5dp"
-            android:background="#00FFFFFF"
-
+            android:background="@drawable/function"
+            style="@style/Widget.AppCompat.Button"
+            android:foreground="?android:attr/selectableItemBackground"
             />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"/>
+
         <Button
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:id="@+id/btn_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginRight="5dp"
             android:layout_alignParentRight="true"
-            android:background="@drawable/exit1"
+            android:background="@drawable/exit"
+            style="@style/Widget.AppCompat.Button"
+            android:foreground="?android:attr/selectableItemBackground"
             />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/text1"/>
+
 
     </RelativeLayout>
     
@@ -37,10 +48,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9">
-        <TextView
+        <!--
+        <view class="androidx.appcompat.app.AlertController$RecycleListView"
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-        
+            android:layout_height="match_parent"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="50sp"
+            android:autoSizeMinTextSize="20sp"
+
+            android:scrollbars="vertical"/>
+        -->
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|center_vertical"
+            app:autoSizeMaxTextSize="60sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform" />
+
     </LinearLayout>
     
     <LinearLayout
@@ -57,6 +85,7 @@
             android:orientation="vertical"
             >
             <Button
+                android:id="@+id/btn_fen"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -65,6 +94,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_left"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -73,6 +103,7 @@
                 android:text="@string/fun_zuo"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_7"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -81,6 +112,7 @@
                 android:text="@string/num7"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -89,6 +121,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -97,6 +130,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_percent"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -113,6 +147,7 @@
             android:orientation="vertical"
             >
             <Button
+                android:id="@+id/btn_gen"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -121,6 +156,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_right"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -129,6 +165,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_8"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -137,6 +174,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_5"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -145,6 +183,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -153,6 +192,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_0"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -170,6 +210,7 @@
             android:orientation="vertical"
             >
             <Button
+                android:id="@+id/btn_reset"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -177,15 +218,18 @@
                 android:textSize="30sp"
                 android:text="@string/fun_del"
                 android:typeface="sans"/>
+
             <Button
+                android:id="@+id/btn_divide"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_daytime_fun"
                 android:text="@string/fun_chu"
                 android:textSize="30sp"
-                android:typeface="sans"/>
+                android:typeface="sans" />
             <Button
+                android:id="@+id/btn_9"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -194,6 +238,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_6"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -202,6 +247,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_3"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -210,6 +256,7 @@
                 android:text="@string/num3"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_point"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -226,6 +273,7 @@
             android:orientation="vertical"
             >
             <Button
+                android:id="@+id/btn_del"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -234,6 +282,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_multiply"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -242,6 +291,7 @@
                 android:text="@string/fun_che"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_subtract"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -250,6 +300,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_add"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -258,6 +309,7 @@
                 android:textSize="30sp"
                 android:typeface="sans"/>
             <Button
+                android:id="@+id/btn_equal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
@@ -266,10 +318,6 @@
                 android:text="@string/fun_den"
                 android:typeface="sans"/>
         </LinearLayout>
-
-
-
-
 
 
 
